@@ -1,6 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -233,8 +233,34 @@ body.dark-theme {
 }
 
 .nav__logo {
-  font-family: var(--title-font);
+  font-family: 'Cookie', 'sans-serif';
   font-weight: var(--font-medium);
+  position: relative;
+  font-size: 30px;
+  -webkit-text-stroke: 0.3px var(--title-color);
+}
+
+.nav__logo:after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: red;
+  -webkit-text-stroke: 0px var(--title-color);
+  border-radius: 2px solid red;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+ 0%,10%,100%{
+   width: 0;
+ }
+  70%,90%{
+    width: 100%;
+  }
 }
 
 .nav__toggle {
@@ -1019,7 +1045,7 @@ body.dark-theme {
 }
 
 .load .load-gif {
-  width: 300px;
+  width: 500px;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -1049,10 +1075,13 @@ body.dark-theme {
 
 /* For medium devices */
 @media (min-width: 576px) {
-
   .nav,
   .nav__menu {
     width: 380px;
+  }
+
+  .nav__logo{
+    font-size: 40px;
   }
 
   .nav {
