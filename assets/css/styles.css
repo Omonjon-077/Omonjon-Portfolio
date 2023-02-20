@@ -1045,7 +1045,7 @@ body.dark-theme {
 }
 
 .load .load-gif {
-  width: 500px;
+  width: 300px;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -1075,6 +1075,9 @@ body.dark-theme {
 
 /* For medium devices */
 @media (min-width: 576px) {
+  .load-gif{
+    width: 500px;
+  }
   .nav,
   .nav__menu {
     width: 380px;
