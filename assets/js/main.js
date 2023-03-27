@@ -49,7 +49,8 @@ let swiperProjects = new Swiper(".projects__container", {
     },
     pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
+        dynamicBullets: true,
     },
     breakpoints: {
         1200: {
@@ -63,6 +64,7 @@ let swiperProjects = new Swiper(".projects__container", {
 /*=============== SWIPER TESTIMONIAL ===============*/
 let swiperTestimonial = new Swiper(".testimonial__container", {
     grabCursor: true,
+    effect: 'flip',
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
