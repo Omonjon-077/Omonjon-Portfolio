@@ -798,19 +798,19 @@
 
             <div class="contact__content">
                 <h3 class="contact__title">
-                    <i class="ri-send-plane-line"></i>Men haqimda fikringizni qoldiring (Vaqtinchalik bu xizmat ishlamayapdi)
+                    <i class="ri-send-plane-line"></i>Men yoki web-site haqida fikringizni qoldiring.
                 </h3>
 
                 <form action="" class="contact__form" id="contact-form">
                     <div class="contact__form-div">
                         <label class="contact__form-tag">Ism</label>
-                        <input type="text" name="user_name" required placeholder="Ismingizni yozing..."
+                        <input autocomplete="off" type="text" name="user_name" placeholder="Ismingizni yozing..."
                                class="contact__form-input" id="contact-name">
                     </div>
 
                     <div class="contact__form-div">
                         <label class="contact__form-tag">Telefon</label>
-                        <input type="number" name="user_phone" placeholder="Telefon raqamingizni yozing..."
+                        <input autocomplete="off" type="number" name="user_phone" placeholder="Telefon raqamingizni yozing..."
                                class="contact__form-input" id="contact-phone">
                     </div>
 
@@ -884,9 +884,9 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 
 <!--=============== EMAIL JS ===============-->
-<!-- <script type="text/javascript" src="assets/js/email.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<!--=============== EMAIL JS ===============-->
+<!--=============== LOTTIE JS ===============-->
 <script src="assets/js/lottie-player.js"></script>
 
 <!--=============== JQuery JS ===============-->

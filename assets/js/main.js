@@ -73,67 +73,82 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 });
 
 /*=============== EMAIL JS ===============*/
-// const contactForm = document.getElementById('contact-form'),
-//     contactName = document.getElementById('contact-name'),
-//     contactPhone = document.getElementById('contact-phone'),
-//     contactComment = document.getElementById('contact-comment'),
-//     contactMessage = document.getElementById('contact-message')
+const contactForm = document.getElementById('contact-form'),
+    contactName = document.getElementById('contact-name'),
+    contactPhone = document.getElementById('contact-phone'),
+    contactComment = document.getElementById('contact-comment'),
+    contactMessage = document.getElementById('contact-message')
 
-// const sendEmail = (e) => {
-//     e.preventDefault()
+const sendEmail = (e) => {
+    e.preventDefault()
+
     // Check if the field has a value
-    // if (contactName.value === '' || contactPhone.value === '' || contactComment.value === '') {
+    if (contactName.value === '' || contactComment.value === '' || contactPhone.value === '') {
         // Add and remove color
-        // contactMessage.classList.remove('color-blue')
-        // contactMessage.classList.add('color-red')
+        contactMessage.classList.remove('color-blue')
+        contactMessage.classList.add('color-red')
 
         // Show message
-        // contactMessage.textContent = 'Write for me your comments ❗'
-    // } else {
+        contactMessage.textContent = 'Siz to\'liq ma\'lumot kiritmadingiz ✍'
+
+        // Remove message three seconds
+        setTimeout(() => {
+            contactMessage.textContent = ''
+        }, 5000)
+    } else {
         // serviceID - templateID - #form - publicKey
-        // emailjs.sendForm('service_0feud8i', 'template_g193eqe', 'contact-form', '5mBSwoijmne8xYaAB')
-            // .than(() => {
+        emailjs.sendForm('service_16fjhbg', 'template_g193eqe', '#contact-form', '5mBSwoijmne8xYaAB')
+            .then(() => {
                 // Show message and add color
-                // contactMessage.classList.add('color-blue')
-                // contactMessage.textContent = 'Message sent ✅'
+                contactMessage.classList.add('color-blue')
+                contactMessage.classList.remove('color-red')
+                contactMessage.textContent = 'Xabaringiz jo\'natildi ✅'
 
-                // Remove message after five seconds
-                // setTimeout(() => {
-                    // contactMessage.textContent = ''
-//                 }, 5000);
-//             })
-//     }
-// }
+                // Remove message after four seconds
+                setTimeout(() => {
+                    contactMessage.textContent = ''
+                }, 5000)
+            }, () => {
+                // Mail sending error
+                contactMessage.textContent = 'Xabaringiz jo\'natilmadi (Serverda nosozlik) ❌'
+            })
 
-// contactForm.addEventListener('submit', sendEmail)
+        // To clear the input field
+        contactComment.value = '';
+        contactName.value = '';
+        contactPhone.value = '';
+    }
+}
+
+contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
-    
-const scrollActive = () =>{
-  	const scrollY = window.pageYOffset
 
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+const scrollActive = () => {
+    const scrollY = window.pageYOffset
 
-		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add('active-link')
+        } else {
+            sectionsClass.classList.remove('active-link')
+        }
+    })
 }
 window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+        : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -152,9 +167,9 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moo
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
@@ -168,16 +183,16 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () =>{
+const scrollHeader = () => {
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the bg-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('bg-header') 
-                       : header.classList.remove('bg-header')
+    this.scrollY >= 50 ? header.classList.add('bg-header')
+        : header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal ({
+const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 2500,
@@ -187,7 +202,7 @@ const sr = ScrollReveal ({
 
 
 sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`)
-sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
-sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
-sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
-sr.reveal(`.qualification__content, .services__card`, {interval: 100})
+sr.reveal(`.home__info div`, { delay: 600, origin: 'bottom', interval: 100 })
+sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, { origin: 'left' })
+sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, { origin: 'right' })
+sr.reveal(`.qualification__content, .services__card`, { interval: 100 })

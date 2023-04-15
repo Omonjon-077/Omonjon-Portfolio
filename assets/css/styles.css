@@ -64,6 +64,17 @@
   margin: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -940,11 +951,11 @@ body.dark-theme {
 
 /* Status color */
 .color-red {
-  color: hsl(4, 71%, 50%, );
+  color: #da3125 !important;
 }
 
 .color-blue {
-  color: hsl(207, 56%, 45%, );
+  color: #3279b3 !important;
 }
 
 /*=============== FOOTER ===============*/
