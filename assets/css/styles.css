@@ -425,7 +425,7 @@ body.dark-theme {
 }
 
 .home__social-link {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: var(--text-color-light);
   transition: color .3s;
 }
@@ -1330,7 +1330,7 @@ body.dark-theme {
     column-gap: 2rem;
   }
 
-  .home__social-link {
+  .c {
     font-size: 2rem;
   }
 
