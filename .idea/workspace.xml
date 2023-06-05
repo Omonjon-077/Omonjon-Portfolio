@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342ede74-381c-4182-a91f-c3aa3eb017a8" name="Changes" comment="change language" />
+    <list default="true" id="342ede74-381c-4182-a91f-c3aa3eb017a8" name="Changes" comment="change language">
+      <change afterPath="$PROJECT_DIR$/assets/img/project-img/asia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/project-img/ingo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/project-img/sharq.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/project-img/trigger.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/project-img/trigger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +54,7 @@
       <workItem from="1676711547748" duration="4176000" />
       <workItem from="1679906667922" duration="4657000" />
       <workItem from="1679981767107" duration="3690000" />
+      <workItem from="1685956919774" duration="7726000" />
     </task>
     <task id="LOCAL-00001" summary="added perfil photo">
       <created>1679916884146</created>
