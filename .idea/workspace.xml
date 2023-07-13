@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342ede74-381c-4182-a91f-c3aa3eb017a8" name="Changes" comment="New images added and projects changes">
+    <list default="true" id="342ede74-381c-4182-a91f-c3aa3eb017a8" name="Changes" comment="Section remove">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,8 @@
       <workItem from="1679906667922" duration="4657000" />
       <workItem from="1679981767107" duration="3690000" />
       <workItem from="1685956919774" duration="7775000" />
-      <workItem from="1686634239342" duration="1571000" />
+      <workItem from="1686634239342" duration="2201000" />
+      <workItem from="1686913393659" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="added perfil photo">
       <created>1679916884146</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685967849612</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Section remove">
+      <created>1686659174054</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686659174054</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +98,7 @@
     <MESSAGE value="added perfil photo" />
     <MESSAGE value="change language" />
     <MESSAGE value="New images added and projects changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="New images added and projects changes" />
+    <MESSAGE value="Section remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Section remove" />
   </component>
 </project>
