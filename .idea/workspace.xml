@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/partners/infinity.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/partners/oson.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/partners/protocol.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/partners/sharq.png" afterDir="false" />
+    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="Partners section added and modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cube-loader.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/cube-loader.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +53,24 @@
       <option name="presentableId" value="Default" />
       <updated>1695821311379</updated>
       <workItem from="1695821311955" duration="2162000" />
-      <workItem from="1695896841686" duration="4809000" />
+      <workItem from="1695896841686" duration="5628000" />
     </task>
+    <task id="LOCAL-00001" summary="Partners section added and modified">
+      <option name="closed" value="true" />
+      <created>1695920983877</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695920983877</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Partners section added and modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partners section added and modified" />
   </component>
 </project>
