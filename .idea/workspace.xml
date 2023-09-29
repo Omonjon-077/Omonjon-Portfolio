@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="Partners section added and modified">
+    <list default="true" id="13676c38-3ab4-455b-8ef6-191d965f683e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\OSPanel\modules\php\PHP_7.4\php.exe" />
-  <component name="ProjectId" id="2VyvoUSJ11XMPS3CpsQt7TDhyHL" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="F:\For Wep Deweloper\OSPanel\modules\php\PHP_7.4\php.exe" />
+  <component name="ProjectId" id="2T9ElM7YziJC6JA9bS9ttU3JVMn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,48 +31,32 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/For Wep Deweloper/OSPanel/domains&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\For Works\For experience\Omonjon-Portfolio\assets\jsons" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="" />
-      <created>1695821311379</created>
+      <changelist id="13676c38-3ab4-455b-8ef6-191d965f683e" name="Changes" comment="" />
+      <created>1690447048469</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695821311379</updated>
-      <workItem from="1695821311955" duration="2162000" />
-      <workItem from="1695896841686" duration="5628000" />
+      <updated>1690447048469</updated>
+      <workItem from="1690447050899" duration="5555000" />
+      <workItem from="1693292070294" duration="3686000" />
+      <workItem from="1695727945007" duration="3938000" />
+      <workItem from="1695968211619" duration="3889000" />
+      <workItem from="1695989286394" duration="990000" />
     </task>
-    <task id="LOCAL-00001" summary="Partners section added and modified">
-      <option name="closed" value="true" />
-      <created>1695920983877</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695920983877</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Partners section added and modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Partners section added and modified" />
   </component>
 </project>
