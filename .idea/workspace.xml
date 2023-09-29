@@ -4,39 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13676c38-3ab4-455b-8ef6-191d965f683e" name="Changes" comment="wrong files removed">
-      <change afterPath="$PROJECT_DIR$/assets/css/weather.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/font/material-symbol-rounded.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/openweather.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/09d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/09n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/10d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/10n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/11d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/11n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/13d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/13n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/50d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/50n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/weather_icons/direction.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather.html" afterDir="false" />
+    <list default="true" id="13676c38-3ab4-455b-8ef6-191d965f683e" name="Changes" comment="weather page added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +68,7 @@
       <workItem from="1693292070294" duration="3686000" />
       <workItem from="1695727945007" duration="3938000" />
       <workItem from="1695968211619" duration="3889000" />
-      <workItem from="1695989286394" duration="4978000" />
+      <workItem from="1695989286394" duration="5779000" />
     </task>
     <task id="LOCAL-00001" summary="footer form title modified">
       <option name="closed" value="true" />
@@ -124,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695993827906</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="weather page added">
+      <option name="closed" value="true" />
+      <created>1695996751874</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695996751874</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="footer form title modified" />
     <MESSAGE value="wrong files removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrong files removed" />
+    <MESSAGE value="weather page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="weather page added" />
   </component>
 </project>
