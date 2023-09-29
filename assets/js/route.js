@@ -8,7 +8,7 @@
 'use strict';
 
 import { updateWeather, error404 } from "./app.js";
-const defaultLocation = "#/weather?lat=41.4633&lon=68.9159" // Tashkent
+const defaultLocation = "#/weather?lat=41.2646&lon=69.2163" // Tashkent
 console.log(defaultLocation)
 
 const currentLocation = function () {
