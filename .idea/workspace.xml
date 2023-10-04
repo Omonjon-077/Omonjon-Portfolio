@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="Partners section added and modified">
+    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="New project item added and remove more img">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
       <updated>1695821311379</updated>
       <workItem from="1695821311955" duration="2162000" />
       <workItem from="1695896841686" duration="5628000" />
+      <workItem from="1696435018080" duration="801000" />
     </task>
     <task id="LOCAL-00001" summary="Partners section added and modified">
       <option name="closed" value="true" />
