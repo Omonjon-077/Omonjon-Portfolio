@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="New project item added and remove more img">
+    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="projects item link fixed">
+      <change afterPath="$PROJECT_DIR$/assets/img/github-icon-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/gitlab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/gulp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/partners/prizma.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/php.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/adobe-xd-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bem.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/bem.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/invision.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sketch-2.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +30,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\OSPanel\modules\php\PHP_7.4\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2VyvoUSJ11XMPS3CpsQt7TDhyHL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +68,10 @@
       <updated>1695821311379</updated>
       <workItem from="1695821311955" duration="2162000" />
       <workItem from="1695896841686" duration="5628000" />
-      <workItem from="1696435018080" duration="801000" />
+      <workItem from="1696435018080" duration="1286000" />
+      <workItem from="1696479825782" duration="172000" />
+      <workItem from="1696853290585" duration="2954000" />
+      <workItem from="1696856720250" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="Partners section added and modified">
       <option name="closed" value="true" />
@@ -65,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695920983877</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="projects item link fixed">
+      <option name="closed" value="true" />
+      <created>1696435888356</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696435888356</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Partners section added and modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Partners section added and modified" />
+    <MESSAGE value="projects item link fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="projects item link fixed" />
   </component>
 </project>
