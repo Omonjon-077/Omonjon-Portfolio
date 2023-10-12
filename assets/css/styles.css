@@ -145,7 +145,10 @@ body.dark-theme {
 .dark-theme .home__shape-wawes,
 .dark-theme .home__shape-circle,
 .dark-theme .qualification__img,
-.dark-theme .testimonial__img {
+.dark-theme .testimonial__img,
+.dark-theme .self-bem,
+.dark-theme .self-github,
+.dark-theme .self-php{
     filter: invert(1);
 }
 
