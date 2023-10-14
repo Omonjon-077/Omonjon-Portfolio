@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="Konikmalar section changes and 1 new partner added. Words modified and services section fixed">
-      <change afterPath="$PROJECT_DIR$/assets/img/project-img/eprotocol.jpg" afterDir="false" />
+    <list default="true" id="1ca7284e-ff7b-43bf-ba52-e6a8f97b2ec2" name="Changes" comment="1 Project added and bags fixed">
+      <change afterPath="$PROJECT_DIR$/assets/img/project-img/osonsugurta.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/bem.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/bem.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/github-icon-1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/github-icon-1.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/For Works/For experience/Omonjon-Portfolio/assets/img/project-img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/For Works/For experience/Omonjon-Portfolio/assets/img/project-img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\For Works\For experience\Omonjon-Portfolio\assets\img\project-img" />
@@ -69,7 +66,8 @@
       <workItem from="1696479825782" duration="172000" />
       <workItem from="1696853290585" duration="2954000" />
       <workItem from="1696856720250" duration="758000" />
-      <workItem from="1697110496340" duration="898000" />
+      <workItem from="1697110496340" duration="3354000" />
+      <workItem from="1697297822736" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="Partners section added and modified">
       <option name="closed" value="true" />
@@ -95,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696856860357</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1 Project added and bags fixed">
+      <option name="closed" value="true" />
+      <created>1697111441203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697111441203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +111,7 @@
     <MESSAGE value="Partners section added and modified" />
     <MESSAGE value="projects item link fixed" />
     <MESSAGE value="Konikmalar section changes and 1 new partner added. Words modified and services section fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Konikmalar section changes and 1 new partner added. Words modified and services section fixed" />
+    <MESSAGE value="1 Project added and bags fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 Project added and bags fixed" />
   </component>
 </project>
