@@ -145,7 +145,10 @@ body.dark-theme {
 .dark-theme .home__shape-wawes,
 .dark-theme .home__shape-circle,
 .dark-theme .qualification__img,
-.dark-theme .testimonial__img {
+.dark-theme .testimonial__img,
+.dark-theme .self-bem,
+.dark-theme .self-github,
+.dark-theme .self-php{
     filter: invert(1);
 }
 
@@ -630,7 +633,7 @@ body.dark-theme {
 .services__card {
     position: relative;
     width: 228px;
-    height: 322px;
+    height: 357px;
     background-color: var(--container-color);
     text-align: center;
     padding: 3.5rem 1rem;
@@ -654,7 +657,7 @@ body.dark-theme {
 
 .services__border {
     width: 248px;
-    height: 342px;
+    height: 377px;
     border: 1.8px solid var(--text-color-light);
     border-radius: 7.75rem;
     position: absolute;
@@ -1486,7 +1489,7 @@ body.dark-theme {
 
     .services__card {
         width: 245px;
-        height: 345px;
+        height: 370px;
         border-radius: 7.6rem;
         padding: 3.5rem 1.5rem;
     }
@@ -1497,7 +1500,7 @@ body.dark-theme {
 
     .services__border {
         width: 265px;
-        height: 365px;
+        height: 395px;
         border-radius: 8.25rem;
     }
 
