@@ -1,10 +1,9 @@
 /**
  * @license MIT
  * @fileoverview Menage all routes
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
+ * @copyright Omonjon 2023 All rights reserved
+ * @author codewithsadee <omonjons077@gmail.com>
  */
-
 'use strict';
 
 import { updateWeather, error404 } from "./app.js";
@@ -44,7 +43,7 @@ window.addEventListener("hashchange", checkHash);
 
 window.addEventListener("load", function () {
   if (!window.location.hash) {
-    window.location.hash = "#/current-location";
+    window.location.hash = "";
   } else {
     checkHash();
   }
