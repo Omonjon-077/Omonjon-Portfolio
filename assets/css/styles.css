@@ -1126,8 +1126,8 @@ body.dark-theme {
 /*=============== SCROLL UP ===============*/
 .scrollup {
     position: fixed;
-    right: 1rem;
     bottom: -100%;
+    right: 1.5rem;
     background-color: var(--body-color);
     box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
     display: inline-flex;
@@ -1289,8 +1289,11 @@ body.dark-theme {
         column-gap: 8rem;
     }
 
-    .show-scroll {
+    .scrollup {
         right: 3rem;
+    }
+
+    .show-scroll {
         bottom: 3.5rem;
     }
 }
@@ -1362,8 +1365,8 @@ body.dark-theme {
         font-size: 2.25rem;
     }
 
-    .show-scroll {
-        right: 3rem;
+    .scrollup {
+        right: 5rem;
     }
 
     /* Change beackround header */
