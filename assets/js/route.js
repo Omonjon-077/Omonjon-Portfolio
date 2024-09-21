@@ -2,49 +2,5 @@
  * @license MIT
  * @fileoverview Menage all routes
  * @copyright Omonjon 2023 All rights reserved
- * @author codewithsadee <omonjons077@gmail.com>
- */
-'use strict';
-
-import { updateWeather, error404 } from "./app.js";
-const defaultLocation = "#/weather?lat=41.2646&lon=69.2163" // Tashkent
-console.log(defaultLocation)
-
-const currentLocation = function () {
-  window.navigator.geolocation.getCurrentPosition(res => {
-    const { latitude, longitude } = res.coords;
-
-    updateWeather(`lat=${latitude}`, `lon=${longitude}`);
-  }, err => {
-    window.location.hash = defaultLocation;
-  });
-}
-
-/**
- * @param {string} query Searched query
- */
-const searchedLocation = query => updateWeather(...query.split("&"));
-// updateWeather("lat=51.5073219", "lon=-0.1276474")
-
-const routes = new Map([
-  ["/current-location", currentLocation],
-  ["/weather", searchedLocation]
-]);
-
-const checkHash = function () {
-  const requestURL = window.location.hash.slice(1);
-
-  const [route, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
-
-  routes.get(route) ? routes.get(route)(query) : error404();
-}
-
-window.addEventListener("hashchange", checkHash);
-
-window.addEventListener("load", function () {
-  if (!window.location.hash) {
-    window.location.hash = "#/current-location";
-  } else {
-    checkHash();
-  }
-});
+ * @author Omonjon <omonjons077@gmail.com>
+ */ "use strict";import{updateWeather as t,error404 as o}from"./app.js";let defaultLocation="#/weather?lat=41.2646&lon=69.2163";console.log(defaultLocation);let currentLocation=function(){window.navigator.geolocation.getCurrentPosition(o=>{let{latitude:e,longitude:a}=o.coords;t(`lat=${e}`,`lon=${a}`)},t=>{window.location.hash=defaultLocation})},searchedLocation=o=>t(...o.split("&")),routes=new Map([["/current-location",currentLocation],["/weather",searchedLocation]]),checkHash=function(){let t=window.location.hash.slice(1),[e,a]=t.includes?t.split("?"):[t];routes.get(e)?routes.get(e)(a):o()};window.addEventListener("hashchange",checkHash),window.addEventListener("load",function(){window.location.hash?checkHash():window.location.hash="#/current-location"});

@@ -7,6 +7,21 @@ window.addEventListener("load", function (eventObject) {
 
 });
 
+/*=============== GET CURRENT YEAR ===============*/
+// Hozirgi yilni olish
+const currentYear = new Date().getFullYear();
+
+// Yilni HTML elementiga joylash
+document.getElementById('current-year').textContent = currentYear;
+
+/*=============== MASK FOR PHONE NUMBER MENU ===============*/
+if ($('#contact-phone').length) {
+    IMask(document.getElementById('contact-phone'), {
+        mask: '+{998}(00)000-00-00'
+    });
+}
+
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
@@ -124,55 +139,57 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     keyboard: true,
 });
 
-/*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-    contactName = document.getElementById('contact-name'),
-    contactPhone = document.getElementById('contact-phone'),
-    contactComment = document.getElementById('contact-comment'),
-    contactMessage = document.getElementById('contact-message')
+/*=============== EMAIL JS (this function close) ===============*/
+if ($('.email-js').length) {
+    const contactForm = document.getElementById('contact-form'),
+        contactName = document.getElementById('contact-name'),
+        contactPhone = document.getElementById('contact-phone'),
+        contactComment = document.getElementById('contact-comment'),
+        contactMessage = document.getElementById('contact-message')
 
-const sendEmail = (e) => {
-    e.preventDefault()
+    const sendEmail = (e) => {
+        e.preventDefault()
 
-    // Check if the field has a value
-    if (contactName.value === '' || contactComment.value === '') {
-        // Add and remove color
-        contactMessage.classList.remove('color-blue')
-        contactMessage.classList.add('color-red')
+        // Check if the field has a value
+        if (contactName.value === '' || contactComment.value === '') {
+            // Add and remove color
+            contactMessage.classList.remove('color-blue')
+            contactMessage.classList.add('color-red')
 
-        // Show message
-        contactMessage.textContent = 'Siz to\'liq ma\'lumot kiritmadingiz ✍'
+            // Show message
+            contactMessage.textContent = 'Siz to\'liq ma\'lumot kiritmadingiz ✍'
 
-        // Remove message three seconds
-        setTimeout(() => {
-            contactMessage.textContent = ''
-        }, 5000)
-    } else {
-        // serviceID - templateID - #form - publicKey
-        emailjs.sendForm('service_16fjhbg', 'template_g193eqe', '#contact-form', '5mBSwoijmne8xYaAB')
-            .then(() => {
-                // Show message and add color
-                contactMessage.classList.add('color-blue')
-                contactMessage.classList.remove('color-red')
-                contactMessage.textContent = 'Xabaringiz jo\'natildi ✅'
+            // Remove message three seconds
+            setTimeout(() => {
+                contactMessage.textContent = ''
+            }, 5000)
+        } else {
+            // serviceID - templateID - #form - publicKey
+            emailjs.sendForm('service_16fjhbg', 'template_g193eqe', '#contact-form', '5mBSwoijmne8xYaAB')
+                .then(() => {
+                    // Show message and add color
+                    contactMessage.classList.add('color-blue')
+                    contactMessage.classList.remove('color-red')
+                    contactMessage.textContent = 'Xabaringiz jo\'natildi ✅'
 
-                // Remove message after four seconds
-                setTimeout(() => {
-                    contactMessage.textContent = ''
-                }, 5000)
-            }, () => {
-                // Mail sending error
-                contactMessage.textContent = 'Xabaringiz jo\'natilmadi (Serverda nosozlik) ❌'
-            })
+                    // Remove message after four seconds
+                    setTimeout(() => {
+                        contactMessage.textContent = ''
+                    }, 5000)
+                }, () => {
+                    // Mail sending error
+                    contactMessage.textContent = 'Xabaringiz jo\'natilmadi (Serverda nosozlik) ❌'
+                })
 
-        // To clear the input field
-        contactComment.value = '';
-        contactName.value = '';
-        contactPhone.value = '';
+            // To clear the input field
+            contactComment.value = '';
+            contactName.value = '';
+            contactPhone.value = '';
+        }
     }
-}
 
-contactForm.addEventListener('submit', sendEmail)
+    contactForm.addEventListener('submit', sendEmail)
+}
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -249,12 +266,57 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
-    // reset: true 
+    // reset: true
 })
 
 
 sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`)
-sr.reveal(`.home__info div`, { delay: 600, origin: 'bottom', interval: 100 })
-sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, { origin: 'left' })
-sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, { origin: 'right' })
-sr.reveal(`.qualification__content, .services__card`, { interval: 100 })
+sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
+sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
+sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
+sr.reveal(`.qualification__content, .services__card`, {interval: 100})
+
+/*=============== SEND TELEGRAM BOT ===============*/
+let form = document.getElementById("contact-form"),
+    toast = document.getElementById("contact-message");
+
+// FOR SEND BOT
+let bot = {
+    TOKEN: "7244017061:AAEKlZM-uhpGl6PvLAvWgAJJEuU848CQ4HA",
+    chatID: "1369873117", // Agar botning o'zigagina xabar jo'natilsa ID shunday qoladi agar guruhga bolsa boshiga tire "-" qo'yish kerak
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let userName = document.getElementById("contact-name"),
+        userPhone = document.getElementById("contact-phone"),
+        userMessage = document.getElementById("contact-comment");
+
+    let sendMessage = `Mijoz: %0A 👤 Ismi: ${userName.value} %0A 📞 Telefon raqami: ${userPhone.value} %0A 💬 Xabari: ${userMessage.value} %0A%0A Manba: omonjon.triger.uz`
+
+    if (userName.value === "") {
+        alert("Ismingizni yozmagansiz!");
+    } else if (userMessage.value === "") {
+        alert("Xabar yozmagansiz!");
+    } else {
+        fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${sendMessage}`, {
+            method: "GET"
+        })
+            .then(success => {
+                userName.value = "";
+                userPhone.value = "";
+                userMessage.value = "";
+                toast.style.color = "green";
+                toast.textContent = `Xabaringiz jo'natildi, e'tibor uchun rahmat 🤗`
+                setTimeout(function () {
+                    toast.textContent = ``
+                }, 5000);
+            }, error => {
+                alert("Xabaringiz jo'natilmadi, iltimos keyinroq urunib ko'ring!");
+                userName = "";
+                userPhone = "";
+                userMessage = "";
+            })
+    }
+})

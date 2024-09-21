@@ -1,166 +1,37 @@
 /**
  * @license MIT
  * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
-
-'use strict';
-
-import { fetchData, url } from "./api.js";
-import * as module from "./module.js";
-
-/**
- * Add event listener on multiple elements
- * @param {NodeList} elements Eelements node array
- * @param {string} eventType Event Type e.g.: "click", "mouseover"
- * @param {Function} callback Callback function
- */
-const addEventOnElements = function (elements, eventType, callback) {
-  for (const element of elements) element.addEventListener(eventType, callback);
-}
-
-/**
- * Toggle search in mobile devices
- */
-const searchView = document.querySelector("[data-search-view]");
-const searchTogglers = document.querySelectorAll("[data-search-toggler]");
-
-const toggleSearch = () => searchView.classList.toggle("active");
-addEventOnElements(searchTogglers, "click", toggleSearch);
-
-/**
- * SEARCH INTEGRATION
- */
-const searchField = document.querySelector("[data-search-field]");
-const searchResult = document.querySelector("[data-search-result]");
-
-let searchTimeout = null;
-const serachTimeoutDuration = 500;
-
-searchField.addEventListener("input", function () {
-
-  searchTimeout ?? clearTimeout(searchTimeout);
-
-  if (!searchField.value) {
-    searchResult.classList.remove("active");
-    searchResult.innerHTML = "";
-    searchField.classList.remove("searching");
-  } else {
-    searchField.classList.add("searching");
-  }
-
-  if (searchField.value) {
-    searchTimeout = setTimeout(() => {
-      fetchData(url.geo(searchField.value), function (locations) {
-        searchField.classList.remove("searching");
-        searchResult.classList.add("active");
-        searchResult.innerHTML = `
+ * @author omonjon <omonjons077@gmail.com>
+ */ "use strict";import{fetchData as e,url as s}from"./api.js";import*as a from"./module.js";let addEventOnElements=function(e,s,a){for(let t of e)t.addEventListener(s,a)},searchView=document.querySelector("[data-search-view]"),searchTogglers=document.querySelectorAll("[data-search-toggler]"),toggleSearch=()=>searchView.classList.toggle("active");addEventOnElements(searchTogglers,"click",toggleSearch);let searchField=document.querySelector("[data-search-field]"),searchResult=document.querySelector("[data-search-result]"),searchTimeout=null,serachTimeoutDuration=500;searchField.addEventListener("input",function(){clearTimeout(searchTimeout),searchField.value?searchField.classList.add("searching"):(searchResult.classList.remove("active"),searchResult.innerHTML="",searchField.classList.remove("searching")),searchField.value&&(searchTimeout=setTimeout(()=>{e(s.geo(searchField.value),function(e){searchField.classList.remove("searching"),searchResult.classList.add("active"),searchResult.innerHTML=`
           <ul class="view-list" data-search-list></ul>
-        `;
-
-        const /** {NodeList} | [] */ items = [];
-
-        for (const { name, lat, lon, country, state } of locations) {
-          const searchItem = document.createElement("li");
-          searchItem.classList.add("view-item");
-
-          searchItem.innerHTML = `
+        `;let s=[];for(let{name:a,lat:t,lon:l,country:i,state:c}of e){let r=document.createElement("li");r.classList.add("view-item"),r.innerHTML=`
             <span class="m-icon">location_on</span>
 
             <div>
-              <p class="item-title">${name}</p>
+              <p class="item-title">${a}</p>
 
-              <p class="label-2 item-subtitle">${state || ""} ${country}</p>
+              <p class="label-2 item-subtitle">${c||""} ${i}</p>
             </div>
 
-            <a href="#/weather?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
-          `;
-
-          searchResult.querySelector("[data-search-list]").appendChild(searchItem);
-          items.push(searchItem.querySelector("[data-search-toggler]"));
-        }
-
-        addEventOnElements(items, "click", function () {
-          toggleSearch();
-          searchResult.classList.remove("active");
-        })
-      });
-    }, serachTimeoutDuration);
-  }
-
-});
-
-
-const container = document.querySelector("[data-container]");
-const loading = document.querySelector("[data-loading]");
-const currentLocationBtn = document.querySelector("[data-current-location-btn]");
-const errorContent = document.querySelector("[data-error-content]");
-
-/**
- * Render all weather data in html page
- * 
- * @param {number} lat Latitude
- * @param {number} lon Longitude
- */
-export const updateWeather = function (lat, lon) {
-
-  loading.style.display = "grid";
-  container.style.overflowY = "hidden";
-  container.classList.remove("fade-in");
-  errorContent.style.display = "none";
-
-  const currentWeatherSection = document.querySelector("[data-current-weather]");
-  const highlightSection = document.querySelector("[data-highlights]");
-  const hourlySection = document.querySelector("[data-hourly-forecast]");
-  const forecastSection = document.querySelector("[data-5-day-forecast]");
-
-  currentWeatherSection.innerHTML = "";
-  highlightSection.innerHTML = "";
-  hourlySection.innerHTML = "";
-  forecastSection.innerHTML = "";
-
-  if (window.location.hash === "#/current-location") {
-    currentLocationBtn.setAttribute("disabled", "");
-  } else {
-    currentLocationBtn.removeAttribute("disabled");
-  }
-
-  /**
-   * CURRENT WEATHER SECTION
-   */
-  fetchData(url.currentWeather(lat, lon), function (currentWeather) {
-
-    const {
-      weather,
-      dt: dateUnix,
-      sys: { sunrise: sunriseUnixUTC, sunset: sunsetUnixUTC },
-      main: { temp, feels_like, pressure, humidity },
-      visibility,
-      timezone
-    } = currentWeather
-    const [{ description, icon }] = weather;
-
-    const card = document.createElement("div");
-    card.classList.add("card", "card-lg", "current-weather-card");
-
-    card.innerHTML = `
+            <a href="#/weather?lat=${t}&lon=${l}" class="item-link has-state" aria-label="${a} weather" data-search-toggler></a>
+          `,searchResult.querySelector("[data-search-list]").appendChild(r),s.push(r.querySelector("[data-search-toggler]"))}addEventOnElements(s,"click",function(){toggleSearch(),searchResult.classList.remove("active")})})},500))});let container=document.querySelector("[data-container]"),loading=document.querySelector("[data-loading]"),currentLocationBtn=document.querySelector("[data-current-location-btn]"),errorContent=document.querySelector("[data-error-content]");export const updateWeather=function(t,l){loading.style.display="grid",container.style.overflowY="hidden",container.classList.remove("fade-in"),errorContent.style.display="none";let i=document.querySelector("[data-current-weather]"),c=document.querySelector("[data-highlights]"),r=document.querySelector("[data-hourly-forecast]"),n=document.querySelector("[data-5-day-forecast]");i.innerHTML="",c.innerHTML="",r.innerHTML="",n.innerHTML="","#/current-location"===window.location.hash?currentLocationBtn.setAttribute("disabled",""):currentLocationBtn.removeAttribute("disabled"),e(s.currentWeather(t,l),function(d){let{weather:o,dt:h,sys:{sunrise:p,sunset:u},main:{temp:m,feels_like:g,pressure:v,humidity:y},visibility:b,timezone:w}=d,[{description:L,icon:f}]=o,T=document.createElement("div");T.classList.add("card","card-lg","current-weather-card"),T.innerHTML=`
       <h2 class="title-2 card-title">Now</h2>
 
       <div class="weapper">
-        <p class="heading">${parseInt(temp)}&deg;<sup>c</sup></p>
+        <p class="heading">${parseInt(m)}&deg;<sup>c</sup></p>
 
-        <img src="./assets/images/weather_icons/${icon}.png" width="64" height="64" alt="${description}"
+        <img src="./assets/images/weather_icons/${f}.png" width="64" height="64" alt="${L}"
           class="weather-icon">
       </div>
 
-      <p class="body-3">${description}</p>
+      <p class="body-3">${L}</p>
 
       <ul class="meta-list">
 
         <li class="meta-item">
           <span class="m-icon">calendar_today</span>
 
-          <p class="title-3 meta-text">${module.getDate(dateUnix, timezone)}</p>
+          <p class="title-3 meta-text">${a.getDate(h,w)}</p>
         </li>
 
         <li class="meta-item">
@@ -170,28 +41,7 @@ export const updateWeather = function (lat, lon) {
         </li>
 
       </ul>
-    `;
-
-    fetchData(url.reverseGeo(lat, lon), function ([{ name, country }]) {
-      card.querySelector("[data-location]").innerHTML = `${name}, ${country}`
-    });
-
-    currentWeatherSection.appendChild(card);
-
-    /**
-     * TODAY'S HIGHLIGHTS
-     */
-    fetchData(url.airPollution(lat, lon), function (airPollution) {
-
-      const [{
-        main: { aqi },
-        components: { no2, o3, so2, pm2_5 }
-      }] = airPollution.list;
-
-      const card = document.createElement("div");
-      card.classList.add("card", "card-lg");
-
-      card.innerHTML = `
+    `,e(s.reverseGeo(t,l),function([{name:e,country:s}]){T.querySelector("[data-location]").innerHTML=`${e}, ${s}`}),i.appendChild(T),e(s.airPollution(t,l),function(e){let[{main:{aqi:s},components:{no2:t,o3:l,so2:i,pm2_5:r}}]=e.list,n=document.createElement("div");n.classList.add("card","card-lg"),n.innerHTML=`
         <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
 
         <div class="highlight-list">
@@ -207,25 +57,25 @@ export const updateWeather = function (lat, lon) {
               <ul class="card-list">
 
                 <li class="card-item">
-                  <p class="title-1">${pm2_5.toPrecision(3)}</p>
+                  <p class="title-1">${r.toPrecision(3)}</p>
 
                   <p class="label-1">PM<sub>2.5</sub></p>
                 </li>
 
                 <li class="card-item">
-                  <p class="title-1">${so2.toPrecision(3)}</p>
+                  <p class="title-1">${i.toPrecision(3)}</p>
 
                   <p class="label-1">SO<sub>2</sub></p>
                 </li>
 
                 <li class="card-item">
-                  <p class="title-1">${no2.toPrecision(3)}</p>
+                  <p class="title-1">${t.toPrecision(3)}</p>
 
                   <p class="label-1">NO<sub>2</sub></p>
                 </li>
 
                 <li class="card-item">
-                  <p class="title-1">${o3.toPrecision(3)}</p>
+                  <p class="title-1">${l.toPrecision(3)}</p>
 
                   <p class="label-1">O<sub>3</sub></p>
                 </li>
@@ -234,8 +84,8 @@ export const updateWeather = function (lat, lon) {
 
             </div>
 
-            <span class="badge aqi-${aqi} label-${aqi}" title="${module.aqiText[aqi].message}">
-              ${module.aqiText[aqi].level}
+            <span class="badge aqi-${s} label-${s}" title="${a.aqiText[s].message}">
+              ${a.aqiText[s].level}
             </span>
 
           </div>
@@ -252,7 +102,7 @@ export const updateWeather = function (lat, lon) {
                 <div>
                   <p class="label-1">Sunrise</p>
 
-                  <p class="title-1">${module.getTime(sunriseUnixUTC, timezone)}</p>
+                  <p class="title-1">${a.getTime(p,w)}</p>
                 </div>
               </div>
 
@@ -262,7 +112,7 @@ export const updateWeather = function (lat, lon) {
                 <div>
                   <p class="label-1">Sunset</p>
 
-                  <p class="title-1">${module.getTime(sunsetUnixUTC, timezone)}</p>
+                  <p class="title-1">${a.getTime(u,w)}</p>
                 </div>
               </div>
 
@@ -277,7 +127,7 @@ export const updateWeather = function (lat, lon) {
             <div class="wrapper">
               <span class="m-icon">humidity_percentage</span>
 
-              <p class="title-1">${humidity}<sub>%</sub></p>
+              <p class="title-1">${y}<sub>%</sub></p>
             </div>
 
           </div>
@@ -289,7 +139,7 @@ export const updateWeather = function (lat, lon) {
             <div class="wrapper">
               <span class="m-icon">airwave</span>
 
-              <p class="title-1">${pressure}<sub>hPa</sub></p>
+              <p class="title-1">${v}<sub>hPa</sub></p>
             </div>
 
           </div>
@@ -301,7 +151,7 @@ export const updateWeather = function (lat, lon) {
             <div class="wrapper">
               <span class="m-icon">visibility</span>
 
-              <p class="title-1">${visibility / 1000}<sub>km</sub></p>
+              <p class="title-1">${b/1e3}<sub>km</sub></p>
             </div>
 
           </div>
@@ -313,29 +163,13 @@ export const updateWeather = function (lat, lon) {
             <div class="wrapper">
               <span class="m-icon">thermostat</span>
 
-              <p class="title-1">${parseInt(feels_like)}&deg;<sup>c</sup></p>
+              <p class="title-1">${parseInt(g)}&deg;<sup>c</sup></p>
             </div>
 
           </div>
 
         </div>
-      `;
-
-      highlightSection.appendChild(card);
-
-    });
-
-    /**
-     * 24H FORECAST SECTION
-     */
-    fetchData(url.forecast(lat, lon), function (forecast) {
-
-      const {
-        list: forecastList,
-        city: { timezone }
-      } = forecast;
-
-      hourlySection.innerHTML = `
+      `,c.appendChild(n)}),e(s.forecast(t,l),function(e){let{list:s,city:{timezone:t}}=e;for(let[l,i]of(r.innerHTML=`
         <h2 class="title-2">Today at</h2>
 
         <div class="slider-container">
@@ -343,105 +177,45 @@ export const updateWeather = function (lat, lon) {
 
           <ul class="slider-list" data-wind></ul>
         </div>
-      `;
-
-      for (const [index, data] of forecastList.entries()) {
-
-        if (index > 7) break;
-
-        const {
-          dt: dateTimeUnix,
-          main: { temp },
-          weather,
-          wind: { deg: windDirection, speed: windSpeed }
-        } = data
-        const [{ icon, description }] = weather
-
-        const tempLi = document.createElement("li");
-        tempLi.classList.add("slider-item");
-
-        tempLi.innerHTML = `
+      `,s.entries())){if(l>7)break;let{dt:c,main:{temp:d},weather:o,wind:{deg:h,speed:p}}=i,[{icon:u,description:m}]=o,g=document.createElement("li");g.classList.add("slider-item"),g.innerHTML=`
           <div class="card card-sm slider-card">
 
-            <p class="body-3">${module.getHours(dateTimeUnix, timezone)}</p>
+            <p class="body-3">${a.getHours(c,t)}</p>
 
-            <img src="./assets/images/weather_icons/${icon}.png" width="48" height="48" loading="lazy" alt="${description}"
-              class="weather-icon" title="${description}">
+            <img src="./assets/images/weather_icons/${u}.png" width="48" height="48" loading="lazy" alt="${m}"
+              class="weather-icon" title="${m}">
 
-            <p class="body-3">${parseInt(temp)}&deg;</p>
+            <p class="body-3">${parseInt(d)}&deg;</p>
 
           </div>
-        `;
-        hourlySection.querySelector("[data-temp]").appendChild(tempLi);
-
-        const windLi = document.createElement("li");
-        windLi.classList.add("slider-item");
-
-        windLi.innerHTML = `
+        `,r.querySelector("[data-temp]").appendChild(g);let v=document.createElement("li");v.classList.add("slider-item"),v.innerHTML=`
         <div class="card card-sm slider-card">
 
-          <p class="body-3">${module.getHours(dateTimeUnix, timezone)}</p>
+          <p class="body-3">${a.getHours(c,t)}</p>
 
           <img src="./assets/images/weather_icons/direction.png" width="48" height="48" loading="lazy" alt="direction"
-            class="weather-icon" style="transform: rotate(${windDirection - 180}deg)">
+            class="weather-icon" style="transform: rotate(${h-180}deg)">
 
-          <p class="body-3">${parseInt(module.mps_to_kmh(windSpeed))} km/h</p>
+          <p class="body-3">${parseInt(a.mps_to_kmh(p))} km/h</p>
 
         </div>
-        `;
-        hourlySection.querySelector("[data-wind]").appendChild(windLi);
-
-      }
-
-      /**
-       * 5 DAY FORECAST SECTION
-       */
-      forecastSection.innerHTML = `
+        `,r.querySelector("[data-wind]").appendChild(v)}n.innerHTML=`
         <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
 
         <div class="card card-lg forecast-card">
           <ul data-forecast-list></ul>
         </div>
-      `;
-
-      for (let i = 7, len = forecastList.length; i < len; i += 8) {
-
-        const {
-          main: { temp_max },
-          weather,
-          dt_txt
-        } = forecastList[i];
-        const [{ icon, description }] = weather
-        const date = new Date(dt_txt);
-
-        const li = document.createElement("li");
-        li.classList.add("card-item");
-
-        li.innerHTML = `
+      `;for(let y=7,b=s.length;y<b;y+=8){let{main:{temp_max:w},weather:L,dt_txt:f}=s[y],[{icon:T,description:S}]=L,q=new Date(f),_=document.createElement("li");_.classList.add("card-item"),_.innerHTML=`
           <div class="icon-wrapper">
-            <img src="./assets/images/weather_icons/${icon}.png" width="36" height="36" alt="${description}"
-              class="weather-icon" title="${description}">
+            <img src="./assets/images/weather_icons/${T}.png" width="36" height="36" alt="${S}"
+              class="weather-icon" title="${S}">
 
             <span class="span">
-              <p class="title-2">${parseInt(temp_max)}&deg;</p>
+              <p class="title-2">${parseInt(w)}&deg;</p>
             </span>
           </div>
 
-          <p class="label-1">${date.getDate()} ${module.monthNames[date.getUTCMonth()]}</p>
+          <p class="label-1">${q.getDate()} ${a.monthNames[q.getUTCMonth()]}</p>
 
-          <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>
-        `;
-        forecastSection.querySelector("[data-forecast-list]").appendChild(li);
-
-      }
-
-      loading.style.display = "none";
-      container.style.overflowY = "overlay";
-      container.classList.add("fade-in");
-    });
-
-  });
-
-}
-
-export const error404 = () => errorContent.style.display = "flex";
+          <p class="label-1">${a.weekDayNames[q.getUTCDay()]}</p>
+        `,n.querySelector("[data-forecast-list]").appendChild(_)}loading.style.display="none",container.style.overflowY="overlay",container.classList.add("fade-in")})})};export const error404=()=>errorContent.style.display="flex";let currentYear=new Date().getFullYear();document.getElementById("current-year").textContent=currentYear;
